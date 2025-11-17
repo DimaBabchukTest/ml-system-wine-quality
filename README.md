@@ -158,16 +158,16 @@ The F1‑optimal threshold:
 - **F1 ≈ 0.819** (threshold 0.39)  
 - **F1 ≈ 0.793** (threshold 0.50)
 
-**Note:**
+> **Note:**
 For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
 
 # (Training + FastAPI + Docker + uv)
 
 This project provides: - A **machine learning model** for predicting
-wine quality\
-- A **FastAPI service** to expose predictions\
-- A reproducible environment using **uv**\
-- A **Dockerized API service** ready for deployment\
+wine quality
+- A **FastAPI service** to expose predictions
+- A reproducible environment using **uv**
+- A **Dockerized API service** ready for deployment
 - A full **training pipeline** to retrain the model
 
 ------------------------------------------------------------------------
@@ -354,9 +354,11 @@ uv run python requests/request_localy.py
 ``` bash
 docker build -t wine_model_docker .
 docker run -p 127.0.0.1:8000:8000 --name wine_model_container wine_model_docker
-⚠️ IMPORTANT  
+
+> **IMPORTANT:**
 Do not stop the FastAPI server.  
 Open a **second terminal**, navigate to the project folder again, and run:
+
 uv run python requests/request_localy.py
 
 docker stop wine_model_container
