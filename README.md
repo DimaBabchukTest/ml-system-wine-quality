@@ -158,7 +158,8 @@ The F1‑optimal threshold:
 - **F1 ≈ 0.819** (threshold 0.39)  
 - **F1 ≈ 0.793** (threshold 0.50)
 
-### “For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.”
+**Note:**
+For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
 
 # (Training + FastAPI + Docker + uv)
 
@@ -177,7 +178,7 @@ wine quality\
 WineQuality/
 │
 ├── app/
-│   └── main.py                 # FastAPI application
+│   └── main.py                 # API serving script
 │
 ├── train_eval_model/
 │   └── train_eval_model.py     # Training script
@@ -186,7 +187,7 @@ WineQuality/
 │   └── wine_rate_v1.bin        # Stored model after training
 │
 ├── requests/
-│   └── request_local.py        # Test script to call API
+│   └── request_local.py        # Prediction example
 │
 ├── jupyter_notebook/
 │   └── Wine_Rate.ipynb         # Full analysis and training notebook
@@ -200,6 +201,14 @@ WineQuality/
 ├── uv.lock
 └── Dockerfile
 ```
+> **Note:**  
+ This project follows a modular ML layout: 
+- `train_eval_model.py` performs model training
+- `main.py` serves predictions via FastAPI
+- `request_localy.py` provides an example prediction request  
+
+This mirrors the common ML pattern of **train.py → predict.py → serve.py** used in production systems.
+
 
 ------------------------------------------------------------------------
 
