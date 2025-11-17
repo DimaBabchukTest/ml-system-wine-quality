@@ -163,8 +163,6 @@ For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended
 
 # (Training + FastAPI + Docker + uv)
 
-This project provides: - A **machine learning model** for predicting
-wine quality
 - A **FastAPI service** to expose predictions
 - A reproducible environment using **uv**
 - A **Dockerized API service** ready for deployment
@@ -215,7 +213,7 @@ This mirrors the common ML pattern of **train.py → predict.py → serve.py** u
 ## 2. Clone the Project
 
 ``` bash
-git clone https://github.com/<your-user-or-org>/WineQuality.git
+git clone https://github.com/DimaBabchukTest/ml-system-wine-quality.git
 cd WineQuality
 ```
 
