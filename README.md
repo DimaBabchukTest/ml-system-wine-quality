@@ -46,8 +46,7 @@ wine_quality_data/
 └── winequality.names
 ```
 
-More preprocessing details are in:  
-`jupyter_notebook/Wine_Rate.ipynb`
+More preprocessing details are in: (see 'jupyter_notebook/Wine_Rate.ipynb' [a link](jupyter_notebook/Wine_Rate.ipynb))
 
 ---
 
@@ -69,8 +68,7 @@ A full EDA was conducted including distribution analysis, correlation patterns, 
 - PCA, LDA, t‑SNE show the classes are **not linearly separable**  
 - Outliers were **kept** because they are chemically reasonable and tree models handle them well
 
-Full plots and diagnostics are in:  
-📘 `jupyter_notebook/Wine_Rate.ipynb`
+Full plots and diagnostics are in:  (see 'jupyter_notebook/Wine_Rate.ipynb' [a link](jupyter_notebook/Wine_Rate.ipynb))
 
 ---
 
@@ -159,7 +157,7 @@ F1 (t = 0.37) = 0.8284182305630027
 - **F1 ≈ 0.8228** (threshold 0.50)
 - **Brier Score  = 0.1640** 
 
-(see 'jupyter_notebook/Wine_Rate.ipynb' [a link](jupyter_notebook/Wine_Rate.ipynb))
+More details: (see 'jupyter_notebook/Wine_Rate.ipynb' [a link](jupyter_notebook/Wine_Rate.ipynb))
 
 > **Note:**
 For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
