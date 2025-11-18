@@ -1,5 +1,5 @@
 
-# Wine Quality ML Model (Training + FastAPI + Docker + uv)
+# Wine Quality ML Model (End-to-end data science workflow + FastAPI + Docker + uv)
 
 This repository provides:
 
@@ -13,8 +13,7 @@ This repository provides:
 
 ## 1. Dataset Description
 
-This project uses the **Wine Quality Dataset** from the  
-**UCI Machine Learning Repository**  
+This project uses the **Wine Quality Dataset** from the  **UCI Machine Learning Repository**  
 (copyright belongs to the original authors; see `wine_quality_data/winequality.names`).
 
 The dataset contains physicochemical measurements for Portuguese red and white Vinho Verde wines, collected from real production environments. Each sample includes laboratory‑measured attributes (acidity, sugar, sulfur dioxide, pH, alcohol, etc.) and a sensory quality score assigned by professional tasters.
@@ -374,7 +373,7 @@ docker rmi wine_model_docker
 
 This project can be deployed easily to:
 
--   Render (recommended free tier) (Example of deployed model and result of prediction please see  'presentation' folder)
+-   Render (recommended free tier) (Example of deployed model and result of prediction please see  `presentation` folder)
 -   Koyeb (free instance available)
 -   Fly.io (low cost, not fully free)
 
