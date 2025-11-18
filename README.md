@@ -7,7 +7,7 @@ This repository provides:
 - A **FastAPI prediction service**  
 - A reproducible environment using **uv**  
 - A **Dockerized API** ready for deployment  
-- A complete end-to-end data science workflow (see jupyter_notebook/Wine_Rate.ipynb)
+- A complete end-to-end data science workflow (see **jupyter_notebook/Wine_Rate.ipynb**)
 
 ---
 
@@ -159,6 +159,8 @@ F1 (t = 0.37) = 0.8284182305630027
 - **F1 ≈ 0.8192** (threshold 0.37)  
 - **F1 ≈ 0.8228** (threshold 0.50)
 - **Brier Score  = 0.1640** 
+
+(see **jupyter_notebook/Wine_Rate.ipynb**)
 
 > **Note:**
 For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
