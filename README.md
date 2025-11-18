@@ -132,7 +132,7 @@ Final compact feature set (8 features):
  'total_sulfur_dioxide', 'density', 'ph', 'sulphates', 'alcohol']
 ```
 
-Performance remained nearly identical → simpler, faster, and cleaner model.
+Performance remained nearly identical -> simpler, faster, and cleaner model.
 
 ---
 
@@ -141,22 +141,24 @@ Performance remained nearly identical → simpler, faster, and cleaner model.
 The final Random Forest model was:
 
 ### Calibrated using Isotonic Regression  
-(`CalibratedClassifierCV(method="isotonic", cv="prefit")`)
+(`CalibratedClassifierCV(method="sigmoid", cv="prefit")`)
 
 ###  Threshold Optimization
 
-Thresholds between 0 and 1 were evaluated on the validation set.  
+Thresholds between 0 and 1 were evaluated on the threshould data set.  
 The F1‑optimal threshold:
 
 ```
-≈ 0.39
+≈ 0.37
 ```
+F1 (t = 0.37) = 0.8284182305630027
 
-### Test Performance
+### Test Performance on calibrated model
 
-- **ROC AUC ≈ 0.8227**  
-- **F1 ≈ 0.819** (threshold 0.39)  
-- **F1 ≈ 0.793** (threshold 0.50)
+- **ROC AUC ≈ 0.8218**  
+- **F1 ≈ 0.8192** (threshold 0.37)  
+- **F1 ≈ 0.8228** (threshold 0.50)
+- **Brier Score  = 0.1640** 
 
 > **Note:**
 For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
@@ -370,7 +372,7 @@ docker rmi wine_model_docker
 
 This project can be deployed easily to:
 
--   Render (recommended free tier)
+-   Render (recommended free tier) (Example of deployed model and result of prediction please see  'presentation' folder)
 -   Koyeb (free instance available)
 -   Fly.io (low cost, not fully free)
 
