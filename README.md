@@ -7,13 +7,14 @@ This repository provides:
 - A **FastAPI prediction service**  
 - A reproducible environment using **uv**  
 - A **Dockerized API** ready for deployment  
-- A complete end-to-end data science workflow (see **jupyter_notebook/Wine_Rate.ipynb**)
+- A complete end-to-end data science workflow (see **[a relative link](jupyter_notebook/Wine_Rate.ipynb))**
 
 ---
 
 ## 1. Dataset Description
 
 This project uses the **Wine Quality Dataset** from the  **UCI Machine Learning Repository**  
+[a link](https://archive.ics.uci.edu/dataset/186/wine+quality)
 (copyright belongs to the original authors; see `wine_quality_data/winequality.names`).
 
 The dataset contains physicochemical measurements for Portuguese red and white Vinho Verde wines, collected from real production environments. Each sample includes laboratory‑measured attributes (acidity, sugar, sulfur dioxide, pH, alcohol, etc.) and a sensory quality score assigned by professional tasters.
@@ -159,7 +160,7 @@ F1 (t = 0.37) = 0.8284182305630027
 - **F1 ≈ 0.8228** (threshold 0.50)
 - **Brier Score  = 0.1640** 
 
-(see **jupyter_notebook/Wine_Rate.ipynb**)
+(see [a relative link](jupyter_notebook/Wine_Rate.ipynb))
 
 > **Note:**
 For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
