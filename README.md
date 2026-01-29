@@ -137,7 +137,7 @@ Performance remained nearly identical -> simpler, faster, and cleaner model.
 
 The final Random Forest model was:
 
-### Calibrated using Isotonic Regression  
+### Calibrated using Sigmoid Regression  
 (`CalibratedClassifierCV(method="sigmoid", cv="prefit")`)
 
 ###  Threshold Optimization
