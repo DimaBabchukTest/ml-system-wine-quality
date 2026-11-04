@@ -140,27 +140,28 @@ The final Random Forest model was:
 ### Calibrated using Sigmoid Regression  
 (`CalibratedClassifierCV(method="sigmoid", cv="prefit")`)
 
-###  Threshold Optimization
+### Threshold Optimization
 
-Thresholds between 0 and 1 were evaluated on the threshould data set.  
-The F1‑optimal threshold:
+Thresholds between 0 and 1 were evaluated on the held-out threshold data set.
+The F1-optimal threshold:
 
-```
 ≈ 0.37
-```
-F1 (t = 0.37) = 0.8284182305630027
+
+F1 on the threshold data set (t = 0.37) = 0.828
 
 ### Test Performance on calibrated model
 
-- **ROC AUC ≈ 0.8218**  
-- **F1 ≈ 0.8192** (threshold 0.37)  
+- **ROC AUC ≈ 0.8218**
+- **F1 ≈ 0.8192** (threshold 0.37)
 - **F1 ≈ 0.8228** (threshold 0.50)
-- **Brier Score  = 0.1640** 
+- **Brier Score = 0.1640**
 
-More details: (see 'jupyter_notebook/Wine_Rate.ipynb' [a link](jupyter_notebook/Wine_Rate.ipynb))
+More details: see [jupyter_notebook/Wine_Rate.ipynb](jupyter_notebook/Wine_Rate.ipynb)
 
-> **Note:**
-For production use, a more conservative threshold (e.g. ≥ 0.50) is recommended to prioritize precision over recall.
+> **Note:** On the test set, F1 is almost the same for both thresholds (0.819 vs 0.823),
+> so the choice of threshold does not materially affect F1. For production, the service
+> uses the more conservative threshold of 0.50 to prioritize precision over recall,
+> i.e. fewer wines wrongly classified as "good".
 
 # (Training + FastAPI + Docker + uv)
 
