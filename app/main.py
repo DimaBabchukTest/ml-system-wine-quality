@@ -22,9 +22,8 @@ async def predict(request: Request):
     wine_record = df[final_features_without_target]
     print(wine_record)
     y_pred = pipline.predict_proba(wine_record)[0, 1]
-    treshold = 0.5 # in order to get good wine for sure 
     result = {
-        'Good?': (round(float(y_pred),3) > 0.5),
+        'Good?': (round(float(y_pred),3) > 0.5), # conservative threshold 0.5 to prioritize precision (see README: Threshold Optimization)
         'prediction_probability':  round(float(y_pred),3),        
         'request': wine_details
     }
