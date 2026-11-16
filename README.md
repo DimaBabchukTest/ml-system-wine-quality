@@ -175,7 +175,7 @@ More details: see [jupyter_notebook/Wine_Rate.ipynb](jupyter_notebook/Wine_Rate.
 ## 1. Project Structure
 
 ```
-WineQuality/
+ml-system-wine-quality/
 │
 ├── app/
 │   └── main.py                 # API serving script
@@ -216,7 +216,7 @@ This mirrors the common ML pattern of **train.py → predict.py → serve.py** u
 
 ``` bash
 git clone https://github.com/DimaBabchukTest/ml-system-wine-quality.git
-cd WineQuality
+cd ml-system-wine-quality/
 ```
 
 ------------------------------------------------------------------------
