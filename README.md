@@ -163,6 +163,8 @@ More details: see [jupyter_notebook/Wine_Rate.ipynb](jupyter_notebook/Wine_Rate.
 > uses the more conservative threshold of 0.50 to prioritize precision over recall,
 > i.e. fewer wines wrongly classified as "good".
 
+**Methodological note:** model family, hyperparameters and feature subset were selected using cross-validation and the validation set. The test set was evaluated several times during the analysis (for candidate models and calibration curves) for reporting and diagnostics, so the final test metrics may be slightly optimistic. A stricter protocol would evaluate the test set only once.
+
 # (Training + FastAPI + Docker + uv)
 
 - A **FastAPI service** to expose predictions
