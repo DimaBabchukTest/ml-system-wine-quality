@@ -187,7 +187,7 @@ WineQuality/
 │   └── wine_rate_v1.bin        # Stored model after training
 │
 ├── requests/
-│   └── request_local.py        # Prediction example
+│   └── request_localy.py        # Prediction example
 │
 ├── jupyter_notebook/
 │   └── Wine_Rate.ipynb         # Full analysis and training notebook
