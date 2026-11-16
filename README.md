@@ -354,13 +354,18 @@ uv run python requests/request_localy.py
 ``` bash
 docker build -t wine_model_docker .
 docker run -p 127.0.0.1:8000:8000 --name wine_model_container wine_model_docker
+```
 
-> **IMPORTANT:**
-Do not stop the FastAPI server.  
-Open a **second terminal**, navigate to the project folder again, and run:
+> **IMPORTANT:** Do not stop the FastAPI server.
+> Open a **second terminal**, navigate to the project folder again, and run:
 
+``` bash
 uv run python requests/request_localy.py
+```
 
+Clean up:
+
+``` bash
 docker stop wine_model_container
 docker rm wine_model_container
 docker rmi wine_model_docker
